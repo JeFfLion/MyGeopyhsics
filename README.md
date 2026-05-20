@@ -157,8 +157,7 @@ kirchhoff-pstm-2d/
 ├── demo.py                Self-contained synthetic demo / 合成数据演示
 ├── requirements.txt       Python dependencies / 依赖清单
 ├── LICENSE                GPL-3.0 License / 许可协议
-└── docs/
-    └── 实验报告_PSTM.md     Full experimental report / 完整实验报告
+└── demo.py                Self-contained synthetic demo / 合成数据演示
 ```
 
 ### Pipeline / 流水线
@@ -195,4 +194,4 @@ This software is provided for research and educational purposes. Unauthorized co
 
 - Schneider, W. A. (1978). Integral formulation for migration in two and three dimensions. *Geophysics*, 43(1), 49–76.
 - French, W. S. (1975). Computer migration of oblique seismic reflection profiles. *Geophysics*, 40(6), 961–980.
-- [docs/实验报告_PSTM.md](./docs/实验报告_PSTM.md) — Full experimental report (Chinese) / 完整实验报告
+- [demo.py](./demo.py) — Self-contained synthetic demo (Chinese/English) / 合成数据演示脚本
