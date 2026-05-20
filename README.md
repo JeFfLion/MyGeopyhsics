@@ -143,7 +143,7 @@ python run_pstm.py \
 ## Architecture / 架构
 
 ```
-kirchhoff-pstm-2d/
+2D-PSTM/
 ├── pstm_2d/
 │   ├── __init__.py        Package entry / 包入口
 │   ├── engine.py          Top-level PSTM2DEngine / 顶层调度引擎
