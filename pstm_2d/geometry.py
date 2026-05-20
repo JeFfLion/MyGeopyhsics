@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Geometry data structures and SEGY header pre-processing."""
 
 from dataclasses import dataclass, field
@@ -17,8 +19,8 @@ class Geometry:
     offset: np.ndarray      # [N_traces] offset, meters
     cmp_x: np.ndarray       # [N_traces] CMP x coordinate, meters
     fldr: np.ndarray        # [N_traces] field record (shot) index
-    n_shots: int = 601
-    n_rec_per_shot: int = 282
+    n_shots: int = 0
+    n_rec_per_shot: int = 0
 
     @property
     def n_traces(self) -> int:
@@ -91,8 +93,8 @@ class GeomPreProcessor:
         cmp_spacing: float = 25.0,
         max_aperture_m: float = 3000.0,
         coord_scale: float = 100.0,          # divisor: SEGY coords → metres
-        n_shots_expected: int = 601,
-        n_rec_expected: int = 282,
+        n_shots_expected: int = 0,
+        n_rec_expected: int = 0,
     ):
         self.segy_shot_path = segy_shot_path
         self.segy_vel_path = segy_vel_path

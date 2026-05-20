@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Top-level 2D PSTM engine orchestrating preprocessing, scheduling, and output."""
 
 import gc

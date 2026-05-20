@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Single-GPU Kirchhoff PSTM worker engine.
 
 Each worker processes its assigned shot chunk, producing a partial stacked

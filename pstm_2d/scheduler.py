@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Resource-safe multi-GPU scheduler for PSTM shot distribution.
 
 Spawns 4 GPU workers via torch.multiprocessing.spawn and collects partial

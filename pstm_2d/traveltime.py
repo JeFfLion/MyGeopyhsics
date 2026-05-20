@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Geometric ray-tracing traveltime, C++-reference amplitude weighting, and
 shot-gather migration.
 

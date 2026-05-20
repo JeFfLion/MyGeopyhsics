@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """CLI entry point for 2D PSTM migration.
 
 Usage:
-    python run_pstm.py                        # full 601 shots, 4 GPUs
+    python run_pstm.py --shot-path SHOT.sgy --vel-path VEL.sgy
     python run_pstm.py --test-shots 4         # quick 4-shot validation
     python run_pstm.py --n-gpus 2 --help      # custom config
 """
@@ -19,9 +21,9 @@ def main():
         description="2D Pre-Stack Time Migration (Kirchhoff PSTM) on Multi-GPU",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    parser.add_argument("--shot-path", default="NH1_Shot.sgy",
+    parser.add_argument("--shot-path", default="shot_data.sgy",
                         help="Input SEGY shot gathers")
-    parser.add_argument("--vel-path", default="NH1_Vel.sgy",
+    parser.add_argument("--vel-path", default="vel_data.sgy",
                         help="Input SEGY RMS velocity")
     parser.add_argument("--output", default="pstm_result.sgy",
                         help="Output SEGY migrated section")

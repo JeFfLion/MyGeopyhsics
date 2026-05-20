@@ -1,3 +1,5 @@
+# Copyright (c) LJF. All Rights Reserved. | Licensed under GPL-3.0.
+# Unauthorized commercial use is strictly prohibited.
 """Circuit breaker and emergency cleanup utilities for HPC execution safety."""
 
 import gc
