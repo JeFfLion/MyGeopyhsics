@@ -24,6 +24,7 @@
 
 - **DSR traveltime equation** / 双平方根走时方程
 - **Shot-domain migration** with geometric ray-tracing / 炮域偏移，几何射线追踪
+- **Single-file deployment**: `kirchhoff_pstm_2d.py` — zero-install, copy-and-run / 单文件独立版本开箱即用
 - **Multi-GPU** via NCCL `all_reduce` / 多 GPU 并行归约
 - **Per-shot memory release** protocol / 逐炮内存释放机制
 - **OOM auto-degradation** (batch size halving) / 显存溢出自动降级
@@ -72,9 +73,15 @@ python demo.py
 
 # Multi-GPU demo / 多 GPU 演示
 python demo.py --n-gpus 2
+```
 
-# Large synthetic test / 大规模合成测试
-python demo.py --n-shots 100 --n-gpus 4
+### Single-file standalone / 单文件独立版
+
+The entire engine is also available as a single Python file — no package installation needed:
+
+```bash
+# Copy anywhere and run
+python kirchhoff_pstm_2d.py --shot-path ./your_shot.sgy --vel-path ./your_vel.sgy --n-gpus 2
 ```
 
 Output: `demo_pstm_result.sgy` — a SEGY migrated section viewable in any seismic interpretation software.
@@ -144,7 +151,8 @@ python run_pstm.py \
 
 ```
 2D-PSTM/
-├── pstm_2d/
+├── kirchhoff_pstm_2d.py  Single-file standalone engine / 单文件独立版
+├── pstm_2d/              Modular package (also embedded above) / 模块化包
 │   ├── __init__.py        Package entry / 包入口
 │   ├── engine.py          Top-level PSTM2DEngine / 顶层调度引擎
 │   ├── geometry.py        SEGY header parsing & CMP grid / 几何解析
@@ -156,8 +164,7 @@ python run_pstm.py \
 ├── run_pstm.py            CLI entry for real data / 真实数据 CLI 入口
 ├── demo.py                Self-contained synthetic demo / 合成数据演示
 ├── requirements.txt       Python dependencies / 依赖清单
-├── LICENSE                GPL-3.0 License / 许可协议
-└── demo.py                Self-contained synthetic demo / 合成数据演示
+└── LICENSE                GPL-3.0 License / 许可协议
 ```
 
 ### Pipeline / 流水线
